@@ -6,6 +6,9 @@ const Stack = createNativeStackNavigator();
 
 import HomeScreen from "./screens/Home";
 import LoginScreen from "./screens/Login";
+import RegisterScreen from "./screens/Register";
+
+import AppMenuNavigator from "./navigation/AppMenuNavigator";
 
 export default function App () {
     return(
@@ -25,6 +28,16 @@ export default function App () {
                     name="Login"
                     component={LoginScreen}
                     title="Login"
+                />
+                <Stack.Screen
+                    name="Register"
+                    component={RegisterScreen}
+                    title="Cadastro"
+                />
+                <Stack.Screen
+                    name="AppMenuNavigator"
+                    component={AppMenuNavigator}
+                    title="Menu"
                 />
             </Stack.Navigator>
         </NavigationContainer>

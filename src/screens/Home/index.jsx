@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     Text,
-    View
+    View,
+    Linking
 } from 'react-native';
 import {Button} from 'react-native-elements';
 import { styles } from './styles';
@@ -18,6 +19,7 @@ export default function Home (props) {
             <Button
                 buttonStyle={styles.button}
                 title="Cadastrar-se"
+                onPress={() => props.navigation.navigate('Register')}
             />
         </View>
     );
